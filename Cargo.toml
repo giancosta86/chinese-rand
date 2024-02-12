@@ -1,0 +1,35 @@
+[package]
+name = "chinese-rand"
+version = "0.1.0"
+authors = ["Gianluca Costa <gianluca@gianlucacosta.info>"]
+edition = "2021"
+description = "Random generation of data structures in Chinese, using Rust"
+repository = "https://github.com/giancosta86/chinese-rand"
+license = "MIT"
+keywords = ["Chinese", "logograms", "random", "generator", "fastrand"]
+categories = ["data-structures", "algorithms", "date-and-time", "localization"]
+include = [
+    "LICENSE",
+    "README.md",
+    "/benches/",
+    "/examples/",
+    "/src/",
+    "/tests/",
+]
+
+[dependencies]
+chinese-format = "0.8.0"
+digit-sequence = { version = "0.3.4", optional = true }
+fastrand = { version = "2.1.0", optional = true }
+
+[dev-dependencies]
+speculate2 = "0.2"
+
+[features]
+default = ["fastrand"]
+digit-sequence = ["dep:digit-sequence", "chinese-format/digit-sequence"]
+currency = ["chinese-format/currency"]
+gregorian = ["digit-sequence", "chinese-format/gregorian"]
+
+[package.metadata.docs.rs]
+all-features = true
