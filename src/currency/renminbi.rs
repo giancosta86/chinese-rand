@@ -5,6 +5,7 @@ use std::ops::RangeInclusive;
 /// Parameters for the random creation of [RenminbiCurrency].
 ///
 /// **Required feature**: `currency`.
+#[derive(Debug, Clone, PartialEq, Eq, Hash)]
 pub struct RenminbiParams {
     /// The style of the generated currency - for example, financial.
     pub style: CurrencyStyle,

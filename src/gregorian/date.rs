@@ -6,6 +6,7 @@ use std::ops::RangeInclusive;
 pub const DEFAULT_YEAR_RANGE: RangeInclusive<u16> = 1800..=2140;
 
 /// Parameters for the random creation of [Date].
+#[derive(Debug, Clone, PartialEq, Eq, Hash)]
 pub struct DateParams {
     /// How the date should appear - for example, [YearMonthDay](DatePattern::YearMonthDay).
     pub pattern: DatePattern,

@@ -2,6 +2,7 @@ use super::GregorianGenerator;
 use chinese_format::gregorian::{DeltaTime, Hour12, Hour24, LinearTime, Minute, Second};
 
 /// Parameters for the random creation of [LinearTime].
+#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub struct LinearTimeParams {
     /// If set to `true`, the result will include the day part,
     /// plus a 12-hour format; otherwise, the 24-hour format applies.
