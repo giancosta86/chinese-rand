@@ -40,10 +40,8 @@ impl<'a> GregorianGenerator<'a> {
     /// let generator = ChineseFormatGenerator::new(raw_generator);
     /// let gregorian = generator.gregorian();
     ///
-    /// let mut date: Date;
-    ///
     /// fastrand::seed(90);
-    /// date = gregorian.date(DateParams {
+    /// let date: Date = gregorian.date(DateParams {
     ///     pattern: DatePattern::YearMonthDayWeekDay,
     ///     year_range: Some(2000..=2019),
     ///     formal: true,
@@ -55,7 +53,7 @@ impl<'a> GregorianGenerator<'a> {
     /// );
     ///
     /// fastrand::seed(90);
-    /// date = gregorian.date(DateParams {
+    /// let date: Date = gregorian.date(DateParams {
     ///     pattern: DatePattern::YearMonthDayWeekDay,
     ///     year_range: Some(2000..=2019),
     ///     formal: false,
@@ -67,7 +65,7 @@ impl<'a> GregorianGenerator<'a> {
     /// );
     ///
     /// fastrand::seed(90);
-    /// date = gregorian.date(DateParams {
+    /// let date: Date = gregorian.date(DateParams {
     ///     pattern: DatePattern::YearMonthDay,
     ///     year_range: Some(2000..=2019),
     ///     formal: false,
@@ -79,7 +77,7 @@ impl<'a> GregorianGenerator<'a> {
     /// );
     ///
     /// fastrand::seed(90);
-    /// date = gregorian.date(DateParams {
+    /// let date: Date = gregorian.date(DateParams {
     ///     pattern: DatePattern::YearMonth,
     ///     year_range: Some(2000..=2019),
     ///     formal: false,
@@ -91,7 +89,7 @@ impl<'a> GregorianGenerator<'a> {
     /// );
     ///
     /// fastrand::seed(90);
-    /// date = gregorian.date(DateParams {
+    /// let date: Date = gregorian.date(DateParams {
     ///     pattern: DatePattern::Year,
     ///     year_range: Some(2000..=2019),
     ///     formal: true,
@@ -103,7 +101,7 @@ impl<'a> GregorianGenerator<'a> {
     /// );
     ///
     /// fastrand::seed(90);
-    /// date = gregorian.date(DateParams {
+    /// let date: Date = gregorian.date(DateParams {
     ///     pattern: DatePattern::Year,
     ///     year_range: Some(2007..=2007),
     ///     formal: true,
@@ -115,7 +113,7 @@ impl<'a> GregorianGenerator<'a> {
     /// );
     ///  
     /// fastrand::seed(90);
-    /// date = gregorian.date(DateParams {
+    /// let date: Date = gregorian.date(DateParams {
     ///     pattern: DatePattern::Month,
     ///     year_range: None,
     ///     formal: true,
@@ -127,7 +125,7 @@ impl<'a> GregorianGenerator<'a> {
     /// );
     ///
     /// fastrand::seed(90);
-    /// date = gregorian.date(DateParams {
+    /// let date: Date = gregorian.date(DateParams {
     ///     pattern: DatePattern::Day,
     ///     year_range: None,
     ///     formal: true,
@@ -139,7 +137,7 @@ impl<'a> GregorianGenerator<'a> {
     /// );
     ///
     /// fastrand::seed(90);
-    /// date = gregorian.date(DateParams {
+    /// let date: Date = gregorian.date(DateParams {
     ///     pattern: DatePattern::Day,
     ///     year_range: None,
     ///     formal: false,
@@ -151,7 +149,7 @@ impl<'a> GregorianGenerator<'a> {
     /// );
     ///
     /// fastrand::seed(90);
-    /// date = gregorian.date(DateParams {
+    /// let date: Date = gregorian.date(DateParams {
     ///     pattern: DatePattern::WeekDay,
     ///     year_range: None,
     ///     formal: true,

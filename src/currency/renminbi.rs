@@ -30,10 +30,8 @@ impl ChineseFormatGenerator {
     /// let raw_generator = FastRandGenerator::new();
     /// let generator = ChineseFormatGenerator::new(raw_generator);
     ///
-    /// let mut currency: RenminbiCurrency;
-    ///
     /// fastrand::seed(90);
-    /// currency = generator.renminbi(RenminbiParams {
+    /// let currency: RenminbiCurrency = generator.renminbi(RenminbiParams {
     ///     style: CurrencyStyle::Everyday { formal: true },
     ///     yuan_range: 0..=500,
     ///     include_dimes: true,
@@ -45,7 +43,7 @@ impl ChineseFormatGenerator {
     /// );
     ///
     /// fastrand::seed(90);
-    /// currency = generator.renminbi(RenminbiParams {
+    /// let currency: RenminbiCurrency = generator.renminbi(RenminbiParams {
     ///     style: CurrencyStyle::Everyday { formal: true },
     ///     yuan_range: 0..=500,
     ///     include_dimes: false,
@@ -57,7 +55,7 @@ impl ChineseFormatGenerator {
     /// );
     ///
     /// fastrand::seed(90);
-    /// currency = generator.renminbi(RenminbiParams {
+    /// let currency: RenminbiCurrency = generator.renminbi(RenminbiParams {
     ///     style: CurrencyStyle::Everyday { formal: true },
     ///     yuan_range: 0..=500,
     ///     include_dimes: true,
@@ -69,7 +67,7 @@ impl ChineseFormatGenerator {
     /// );
     ///
     /// fastrand::seed(90);
-    /// currency = generator.renminbi(RenminbiParams {
+    /// let currency: RenminbiCurrency = generator.renminbi(RenminbiParams {
     ///     style: CurrencyStyle::Everyday { formal: true },
     ///     yuan_range: 0..=500,
     ///     include_dimes: false,
@@ -81,7 +79,7 @@ impl ChineseFormatGenerator {
     /// );
     ///
     /// fastrand::seed(90);
-    /// currency = generator.renminbi(RenminbiParams {
+    /// let currency: RenminbiCurrency = generator.renminbi(RenminbiParams {
     ///     style: CurrencyStyle::Everyday { formal: false },
     ///     yuan_range: 0..=500,
     ///     include_dimes: true,
@@ -93,7 +91,7 @@ impl ChineseFormatGenerator {
     /// );
     ///
     /// fastrand::seed(90);
-    /// currency = generator.renminbi(RenminbiParams {
+    /// let currency: RenminbiCurrency = generator.renminbi(RenminbiParams {
     ///     style: CurrencyStyle::Financial,
     ///     yuan_range: 0..=500,
     ///     include_dimes: true,

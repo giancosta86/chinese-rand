@@ -1,6 +1,6 @@
 [package]
 name = "chinese-rand"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Gianluca Costa <gianluca@gianlucacosta.info>"]
 edition = "2021"
 description = "Random generation of data structures in Chinese, using Rust"

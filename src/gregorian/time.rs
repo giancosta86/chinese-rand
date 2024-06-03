@@ -119,31 +119,29 @@ impl<'a> GregorianGenerator<'a> {
     /// let generator = ChineseFormatGenerator::new(raw_generator);
     /// let gregorian = generator.gregorian();
     ///
-    /// let mut time: LinearTime;
-    ///
     /// fastrand::seed(90);
-    /// time = gregorian.linear_time(LinearTimeParams {
+    /// let time: LinearTime = gregorian.linear_time(LinearTimeParams {
     ///     day_part: true,
     ///     include_second: true
     /// });
     /// assert_eq!(time.to_chinese(Variant::Simplified), "下午四点二十分四十三秒");
     ///
     /// fastrand::seed(90);
-    /// time = gregorian.linear_time(LinearTimeParams {
+    /// let time: LinearTime = gregorian.linear_time(LinearTimeParams {
     ///     day_part: false,
     ///     include_second: true
     /// });
     /// assert_eq!(time.to_chinese(Variant::Simplified), "十六点二十分四十三秒");  
     ///
     /// fastrand::seed(90);
-    /// time = gregorian.linear_time(LinearTimeParams {
+    /// let time: LinearTime = gregorian.linear_time(LinearTimeParams {
     ///     day_part: true,
     ///     include_second: false
     /// });
     /// assert_eq!(time.to_chinese(Variant::Simplified), "下午四点二十分");
     ///
     /// fastrand::seed(90);
-    /// time = gregorian.linear_time(LinearTimeParams {
+    /// let time: LinearTime = gregorian.linear_time(LinearTimeParams {
     ///     day_part: false,
     ///     include_second: false
     /// });
