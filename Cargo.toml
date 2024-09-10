@@ -1,6 +1,6 @@
 [package]
 name = "chinese-rand"
-version = "0.1.2"
+version = "0.0.0"
 authors = ["Gianluca Costa <gianluca@gianlucacosta.info>"]
 edition = "2021"
 description = "Random generation of data structures in Chinese, using Rust"
@@ -30,6 +30,3 @@ default = ["fastrand"]
 digit-sequence = ["dep:digit-sequence", "chinese-format/digit-sequence"]
 currency = ["chinese-format/currency"]
 gregorian = ["digit-sequence", "chinese-format/gregorian"]
-
-[package.metadata.docs.rs]
-all-features = true
