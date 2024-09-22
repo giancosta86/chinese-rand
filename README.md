@@ -2,8 +2,7 @@
 
 _Random generation of data structures in Chinese, using Rust_
 
-[![Crates.io Version](https://img.shields.io/crates/v/chinese-rand?style=for-the-badge&logo=rust)
-](https://crates.io/crates/chinese-rand)
+[![Crates.io Version](https://img.shields.io/crates/v/chinese-rand?style=for-the-badge&logo=rust&color=forestgreen)](https://crates.io/crates/chinese-rand)
 
 This crate is designed to instantiate random instances
 of the data structures implementing the `ChineseFormat` trait, made available by [chinese_format](https://crates.io/crates/chinese-format).
@@ -28,6 +27,26 @@ fn main() -> GenericResult<()> {
     let chinese = fraction.to_chinese(Variant::Simplified);
 
     assert_eq!(chinese, "六分之七");
+
+    #[cfg(feature = "gregorian")]
+    {
+      // Now setting the random seed just in order to
+      //predict the generated values
+      fastrand::seed(91);
+
+      let gregorianGenerator = generator.gregorian();
+
+      let delta_time = gregorianGenerator.delta_time(
+        gregorian::DeltaTimeParams {
+          formal: true
+        }
+      );
+
+      assert_eq!(
+        delta_time.to_chinese(Variant::Simplified),
+        "差六分五点"
+      );
+    }
 
     Ok(())
 }
