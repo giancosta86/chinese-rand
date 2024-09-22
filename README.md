@@ -2,8 +2,7 @@
 
 _Random generation of data structures in Chinese, using Rust_
 
-[![Crates.io Version](https://img.shields.io/crates/v/chinese-rand?style=for-the-badge&logo=rust)
-](https://crates.io/crates/chinese-rand)
+[![Crates.io Version](https://img.shields.io/crates/v/chinese-rand?style=for-the-badge&logo=rust&color=forestgreen)](https://crates.io/crates/chinese-rand)
 
 This crate is designed to instantiate random instances
 of the data structures implementing the `ChineseFormat` trait, made available by [chinese_format](https://crates.io/crates/chinese-format).
