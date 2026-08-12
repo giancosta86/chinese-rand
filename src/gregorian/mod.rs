@@ -54,7 +54,7 @@ impl ChineseFormatGenerator {
     /// ```
     ///
     /// **Required feature**: `gregorian`.
-    pub fn gregorian(&self) -> GregorianGenerator {
+    pub fn gregorian(&self) -> GregorianGenerator<'_> {
         GregorianGenerator {
             raw_generator: self.raw_generator.as_ref(),
         }

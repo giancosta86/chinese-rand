@@ -34,9 +34,9 @@ fn main() -> GenericResult<()> {
       //predict the generated values
       fastrand::seed(91);
 
-      let gregorianGenerator = generator.gregorian();
+      let gregorian_generator = generator.gregorian();
 
-      let delta_time = gregorianGenerator.delta_time(
+      let delta_time = gregorian_generator.delta_time(
         gregorian::DeltaTimeParams {
           formal: true
         }
