@@ -30,22 +30,16 @@ fn main() -> GenericResult<()> {
 
     #[cfg(feature = "gregorian")]
     {
-      // Now setting the random seed just in order to
-      //predict the generated values
-      fastrand::seed(91);
+        // Now setting the random seed just in order to
+        //predict the generated values
+        fastrand::seed(91);
 
-      let gregorian_generator = generator.gregorian();
+        let gregorian_generator = generator.gregorian();
 
-      let delta_time = gregorian_generator.delta_time(
-        gregorian::DeltaTimeParams {
-          formal: true
-        }
-      );
+        let delta_time =
+            gregorian_generator.delta_time(gregorian::DeltaTimeParams { formal: true });
 
-      assert_eq!(
-        delta_time.to_chinese(Variant::Simplified),
-        "差六分五点"
-      );
+        assert_eq!(delta_time.to_chinese(Variant::Simplified), "差六分五点");
     }
 
     Ok(())
